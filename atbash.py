@@ -22,10 +22,10 @@ def cifra(texto, modo):
 
 def verificar():
     try:
-        f = open('entrada.txt')
+        f = open('nome_arquivo.txt')
         f.close()
     except:
-        f = open('entrada.txt', 'w')
+        f = open('nome_arquivo.txt', 'w')
         f.close()
         sys.exit()
     
@@ -37,11 +37,11 @@ def getInfo(nome, op):
     return arquivo
 
 def criptografar():
-    nome = 'entrada.txt'
+    nome = 'nome_arquivo.txt'
     op = 'r'
     arquivo = getInfo(nome, op)
 
-    f = open('criptografado.txt', 'w')
+    f = open('nome_arquivo_cripto.txt', 'w')
 
     for frase in arquivo:
         criptografado = cifra(frase, 1)
@@ -49,11 +49,11 @@ def criptografar():
     f.close()
 
 def descriptografar():
-    nome = 'criptografado.txt'
+    nome = 'nome_arquivo_cripto.txt'
     op = 'r'
     arquivo = getInfo(nome, op)
 
-    f = open('descriptografado.txt', 'w')
+    f = open('nome_arquivo_descripto.txt', 'w')
 
     for frase in arquivo:
         descriptografado = cifra(frase, 0)
