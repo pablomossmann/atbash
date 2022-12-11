@@ -86,7 +86,7 @@ Este é o método principal do código, que recebe como parâmetro o texto e o m
 
 É realizado um laço de repetição onde a variável "x" percorrerá caractere por caractere do texto. Para cada caractere terá um segundo laço de repetição dentro que percorrerá a string "za" e será feita uma comparação, isso servirá para tentar encontrar o caractere do texto na string e caso seja encontrado, a posição na string será usada como base para que a "atbash" receba o caractere porém da string "za".
 
-Caso após percorrer a string "za" não seja encontrado o caractere (em resumo, caso não seja uma letra ou número) será adicionado na "atbash" o caractere original.
+Caso após percorrer a string "az" não seja encontrado o caractere (em resumo, caso não seja uma letra ou número) será adicionado na "atbash" o caractere original.
 
 Ao final, a string "atbash" será retornada como resultado da cifra.
 
