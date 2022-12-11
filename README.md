@@ -1,10 +1,10 @@
 # atbash
 
 <h3>Descrição</h3>
-O Atbash é uma cifra de substituição onde o alfabeto é invertido/espelhado, por exemplo A=Z e B=Y. Neste código exite uma melhoria onde os números também são invertidos, por exemplo 0=9 e 1=8. Porém os demais caracteres especiais permanecerão iguais.
+O Atbash é uma cifra de substituição onde o alfabeto é invertido/espelhado, por exemplo A=Z, B=Y, C=X e assim por diante. Neste código exite uma melhoria onde os números também são invertidos, por exemplo 0=9, 1=8 e assim por diante. Porém os demais caracteres especiais permanecerão iguais.
 
 <h3>Código</h3>
-É iniciado com a importação da biblioteca sys para, para possibilitar o encerramento do programa quando necessário. É realizada a chamada do método Main(), onde serão chamados os demais métodos.
+É iniciado com a importação da biblioteca sys para, para possibilitar o encerramento do programa quando necessário. É realizada a chamada do método main(), onde serão chamados os demais métodos.
 
 ```py
 import sys
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 ```
 
 <h3>Verificar</h3>
-Este método é responsável por verificar a existência do arquivo "nome_arquivo.txt", caso já exista o programa irá continuar mas caso contrário e irá cria-lo e encerrar o programa.
+Este método é responsável por verificar a existência do arquivo "nome_arquivo.txt", caso já exista o programa irá continuar mas caso contrário ele irá cria-lo e encerrar o programa.
 
 ```py
 def verificar():
@@ -81,11 +81,14 @@ def descriptografar():
 ```
 
 <h3>Cifra</h3>
+
 Este é o método principal do código, que recebe como parâmetro o texto e o modo e é onde acontece a criptografia. Primeiramente criei duas strings, "az" contendo o alfabeto normal e "za" contendo o alfabeto invertido, elas serão a base para a substituição. Também é criada a string "atbash" que começará vazia e terá seu conteúdo preenchido ao decorrer do código.
 
 É realizado um laço de repetição onde a variável "x" percorrerá caractere por caractere do texto. Para cada caractere terá um segundo laço de repetição dentro que percorrerá a string "za" e será feita uma comparação, isso servirá para tentar encontrar o caractere do texto na string e caso seja encontrado, a posição na string será usada como base para que a "atbash" receba o caractere porém da string "za".
 
 Caso após percorrer a string "za" não seja encontrado o caractere (em resumo, caso não seja uma letra ou número) será adicionado na "atbash" o caractere original.
+
+Ao final, a string "atbash" será retornada como resultado da cifra.
 
 ```py
 def cifra(texto, modo):
